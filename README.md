@@ -1,2 +1,0 @@
-# PanitServer
-Server for Panit
