@@ -1,5 +1,8 @@
 import sum.netz.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class panitServer extends Server {
 
     public panitServer(int port) {
@@ -18,6 +21,7 @@ public class panitServer extends Server {
 
         if (packet[0].equals(Integer.toString(packetIds.PACKET_DISCONNECT))) {
             schliesseVerbindung(ip, port);
+            System.out.println("Verbindung getrennt: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen() + "\n");
         } else {
             sendeAnAlle(message);
         }
@@ -25,12 +29,12 @@ public class panitServer extends Server {
 
     public void bearbeiteVerbindungsverlust(String ip, int port) {
         sendeAnEinen(ip, port, Integer.toString(packetIds.PACKET_DISCONNECT));
-        System.out.println("Verbindung getrennt: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen());
+        System.out.println("Verbindung verloren: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen() + "\n");
     }
 
     public void bearbeiteVerbindungsende(String ip, int port) {
         sendeAnEinen(ip, port, Integer.toString(packetIds.PACKET_DISCONNECT));
-        System.out.println("Verbindung getrennt: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen());
+        System.out.println("Verbindung getrennt: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen() + "\n");
     }
 
     static public void main(String[] args) {
