@@ -1,4 +1,4 @@
-package packets;
+package panit.server.packets;
 
 public class PacketIds {
     public final static String SEPARATOR = ":";

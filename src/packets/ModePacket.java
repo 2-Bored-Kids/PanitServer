@@ -1,4 +1,4 @@
-package packets;
+package panit.server.packets;
 
 public class ModePacket extends Packet {
 
@@ -17,8 +17,6 @@ public class ModePacket extends Packet {
     public ModePacket(String str){
         this(decode(str));
     }
-
-
 
     public String encode(){
         return Integer.toString(PacketIds.MODE) + PacketIds.SEPARATOR + Byte.toString(MODE);

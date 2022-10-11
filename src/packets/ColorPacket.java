@@ -1,4 +1,4 @@
-package packets;
+package panit.server.packets;
 
 import java.awt.Color;
 

@@ -1,4 +1,4 @@
-package packets;
+package panit.server.packets;
 
 public class QuitPacket extends Packet{
     public QuitPacket() {

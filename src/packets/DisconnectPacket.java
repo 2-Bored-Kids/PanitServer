@@ -1,4 +1,4 @@
-package packets;
+package panit.server.packets;
 
 public class DisconnectPacket extends Packet {
     public DisconnectPacket() {
