@@ -1,6 +1,6 @@
-import sum.netz.*;
+import sum.netz.Server;
 
-public class panitServer extends Server {
+public class PanitServer extends Server {
     public panitServer(int port) {
         super(port, false);
         System.out.println("Server wurde unter dem Port " + port + " gestartet!\n");
