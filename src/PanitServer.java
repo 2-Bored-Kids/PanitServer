@@ -38,8 +38,12 @@ public class PanitServer extends Server {
             case PacketIds.DISCONNECT:
                 schliesseVerbindung(ip, port);
             break;
-            case PacketIds.CONNECT:
-                //Send all infos
+            case PacketIds.SETTING:
+                if (packet[1] + packet[2] != "0:0") {
+                    sendeAnEinen(packet[1], Integer.parseInt(packet[2]), getId(ip, port) + message);
+                } else {
+                    sendeAnAlleAusser(id, message);
+                }
             break;
             default:
                 sendeAnAlleAusser(id, message);
