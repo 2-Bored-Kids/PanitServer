@@ -1,5 +1,3 @@
-package server.src.packets;
-
 import java.awt.Color;
 
 public class ColorPacket extends Packet {

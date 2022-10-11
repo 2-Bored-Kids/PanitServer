@@ -1,5 +1,3 @@
-package server.src.packets;
-
 public class MovePacket extends Packet {
 
     public int X, Y;

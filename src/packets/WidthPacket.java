@@ -1,5 +1,3 @@
-package server.src.packets;
-
 public class WidthPacket extends Packet {
 
     int WIDTH;

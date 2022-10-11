@@ -1,5 +1,3 @@
-package server.src.packets;
-
 public class JoinPacket extends Packet{
 
     public JoinPacket() {

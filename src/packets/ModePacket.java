@@ -1,5 +1,3 @@
-package server.src.packets;
-
 public class ModePacket extends Packet {
 
     public byte MODE;

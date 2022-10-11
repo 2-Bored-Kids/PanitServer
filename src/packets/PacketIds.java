@@ -1,5 +1,3 @@
-package server.src.packets;
-
 public class PacketIds {
     public final static String SEPARATOR = ":";
     public final static int CONNECT = 1;
