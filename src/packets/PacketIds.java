@@ -11,4 +11,5 @@ public class PacketIds {
     public final static int MODE = 9;
     public final static int JOIN = 10;
     public final static int QUIT = 11;
+    public final static int SETTING = 12;
 }

@@ -24,6 +24,6 @@ public class ColorPacket extends Packet {
 
     @Override
     public String encode(){
-        return Integer.toString(PacketIds.COLOR) + PacketIds.SEPARATOR + Integer.toString(R) + PacketIds.SEPARATOR  + Integer.toString(G) + PacketIds.SEPARATOR + Integer.toString(B);
+        return Integer.toString(PacketIds.COLOR) + merge(new Object[]{R, G, B});
     }
 }

@@ -1,12 +1,8 @@
 import sum.netz.Server;
 import sum.netz.Serververbindung;
-import sum.ereignis.Buntstift;
-import java.util.HashMap;
 import java.util.Vector;
 
 public class PanitServer extends Server {
-    HashMap<String, Buntstift> userPens = new HashMap<>();
-
     public PanitServer(int port) {
         super(port, false);
         System.out.println("Server started at port " + port);

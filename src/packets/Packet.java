@@ -21,4 +21,13 @@ public class Packet {
         return packet.split(PacketIds.SEPARATOR);
     }
 
+    public static String merge(Object[] objects) {
+        String out = "";
+
+        for (Object obj : objects) {
+            out += PacketIds.SEPARATOR + obj;
+        }
+
+        return out;
+    }
 }

@@ -19,6 +19,6 @@ public class RunterPacket extends Packet {
 
     @Override
     public String encode(){
-        return Integer.toString(PacketIds.RUNTER) + PacketIds.SEPARATOR + Integer.toString(X) + PacketIds.SEPARATOR + Integer.toString(Y);
+        return Integer.toString(PacketIds.RUNTER) + merge(new Object[]{X, Y});
     }
 }

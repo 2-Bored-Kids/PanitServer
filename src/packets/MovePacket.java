@@ -21,6 +21,6 @@ public class MovePacket extends Packet {
 
     @Override
     public String encode(){
-        return Integer.toString(PacketIds.MOVE) + PacketIds.SEPARATOR + Integer.toString(X) + PacketIds.SEPARATOR + Integer.toString(Y);
+        return Integer.toString(PacketIds.MOVE) + merge(new Object[]{X, Y});
     }
 }
