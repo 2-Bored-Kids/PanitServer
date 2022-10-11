@@ -1,13 +1,21 @@
 import sum.netz.Server;
+import sum.netz.Serververbindung;
+import sum.ereignis.Buntstift;
+import java.util.HashMap;
+
+import packets.*;
 
 public class PanitServer extends Server {
-    public panitServer(int port) {
+    HashMap<String, Buntstift> userPens = new HashMap<>();
+
+    public PanitServer(int port) {
         super(port, false);
-        System.out.println("Server wurde unter dem Port " + port + " gestartet!\n");
+        System.out.println("Server started at port " + port);
     }
 
     public void bearbeiteVerbindungsaufbau(String ip, int port) {
-        sendeAnEinen(ip, port, ip + PacketIds.SEPARATOR  + Integer.toString(port) + PacketIds.SEPARATOR + Integer.toString(PacketIds.CONNECT));
+        ConnectPacket cntPk = new ConnectPacket();
+        sendeAnEinen(ip, port, cntPk.encode());
         System.out.println("Neue Verbindung: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen() + "\n");
         sendeAnAlleAusser(ip, port, ip + PacketIds.SEPARATOR  + Integer.toString(port) + PacketIds.SEPARATOR +  Integer.toString(PacketIds.JOIN));
 

@@ -1,4 +1,4 @@
 # PanitServer
 Server for Panit
 
-Run "panitServer.jar port"
+Not safe by any means and completely non-resilient to desync issues
