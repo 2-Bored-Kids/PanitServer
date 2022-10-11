@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args){
-        new PanitServer(1243);
+        new server.src.PanitServer(1243);
     }
 }

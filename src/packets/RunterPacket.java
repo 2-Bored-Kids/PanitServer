@@ -1,4 +1,4 @@
-package panit.server.packets;
+package server.src.packets;
 
 public class RunterPacket extends Packet {
     public int X, Y;

@@ -1,4 +1,4 @@
-package panit.server.packets;
+package server.src.packets;
 
 public class WidthPacket extends Packet {
 

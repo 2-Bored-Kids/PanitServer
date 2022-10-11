@@ -1,4 +1,4 @@
-package panit.server;
+package server.src;
 
 import sum.netz.Server;
 import sum.netz.Serververbindung;
@@ -6,7 +6,7 @@ import sum.ereignis.Buntstift;
 import java.util.HashMap;
 import java.util.Vector;
 
-import panit.server.packets.*;
+import server.src.packets.*;
 
 public class PanitServer extends Server {
     HashMap<String, Buntstift> userPens = new HashMap<>();
