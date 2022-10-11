@@ -10,6 +10,13 @@ public class panitServer extends Server {
         sendeAnEinen(ip, port, ip + PacketIds.SEPARATOR  + Integer.toString(port) + PacketIds.SEPARATOR + Integer.toString(PacketIds.CONNECT));
         System.out.println("Neue Verbindung: " + ip + ":" + Integer.toString(port) + "\nVerbindungen: " + this.zahlDerVerbindungen() + "\n");
         sendeAnAlleAusser(ip, port, ip + PacketIds.SEPARATOR  + Integer.toString(port) + PacketIds.SEPARATOR +  Integer.toString(PacketIds.JOIN));
+
+        for(int lNr = 0; lNr < clientListe().size(); ++lNr) {
+            Serververbindung lSerververbindung = (Serververbindung)clientListe().elementAt(lNr);
+            if (!(lSerververbindung.partnerAdresse().equals(ip) && lSerververbindung.partnerPort() == port)) {
+                sendeAnEinen(ip, port, lSerververbindung.partnerAdresse() + PacketIds.SEPARATOR + Integer.toString(lSerververbindung.partnerPort()) + PacketIds.SEPARATOR + Integer.toString(PacketIds.JOIN));
+            }
+        }
     }
 
     public void bearbeiteNachricht(String ip, int port, String message) {
