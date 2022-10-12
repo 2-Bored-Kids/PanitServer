@@ -13,4 +13,5 @@ public class PacketIds {
   public final static int QUIT = 11;
   public final static int SETTING = 12;
   public final static int IMAGE = 13;
+  public final static int FILLMODE = 14;
 }
