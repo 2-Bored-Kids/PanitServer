@@ -28,6 +28,13 @@ public class PanitServer extends Server {
                 sendeAnEinen(ip, port, usrId + new JoinPacket().encode());
             }
         }
+
+        String firstIp = list.get(0).partnerAdresse();
+        int firstPort = list.get(0).partnerPort();
+
+        if (getId(firstIp, firstPort) != id) {
+            sendeAnEinen(firstIp, firstPort, getId(firstIp, firstPort) + new ImagePacket(id, "").encode());
+        }
     }
 
     public void bearbeiteNachricht(String ip, int port, String message) {
@@ -44,6 +51,9 @@ public class PanitServer extends Server {
                 } else {
                     sendeAnAlleAusser(id, message);
                 }
+            break;
+            case PacketIds.IMAGE:
+                sendeAnEinen(packet[1], Integer.parseInt(packet[2]), getId(ip, port) + message);
             break;
             default:
                 sendeAnAlleAusser(id, message);
