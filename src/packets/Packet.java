@@ -1,33 +1,24 @@
 public class Packet {
 
-    int ID;
+  int ID;
 
-    public Packet(int id) {
+  public Packet(int id) { ID = id; }
 
-        ID = id;
+  public final int getID() { return ID; }
 
+  public String encode() { return ID + ""; }
+
+  public static String[] decode(String packet) {
+    return packet.split(PacketIds.SEPARATOR);
+  }
+
+  public static String merge(Object[] objects) {
+    String out = "";
+
+    for (Object obj : objects) {
+      out += PacketIds.SEPARATOR + obj;
     }
 
-    public final int getID(){
-        return ID;
-    }
-
-
-    public String encode(){
-        return ID + "";
-    }
-
-    public static String[] decode(String packet){
-        return packet.split(PacketIds.SEPARATOR);
-    }
-
-    public static String merge(Object[] objects) {
-        String out = "";
-
-        for (Object obj : objects) {
-            out += PacketIds.SEPARATOR + obj;
-        }
-
-        return out;
-    }
+    return out;
+  }
 }

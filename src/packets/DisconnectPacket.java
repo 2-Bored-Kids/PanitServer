@@ -1,5 +1,3 @@
 public class DisconnectPacket extends Packet {
-    public DisconnectPacket() {
-        super(PacketIds.DISCONNECT);
-    }
+  public DisconnectPacket() { super(PacketIds.DISCONNECT); }
 }

@@ -1,6 +1,4 @@
-public class JoinPacket extends Packet{
+public class JoinPacket extends Packet {
 
-    public JoinPacket() {
-        super(PacketIds.JOIN);
-    }
+  public JoinPacket() { super(PacketIds.JOIN); }
 }
