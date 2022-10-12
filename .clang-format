@@ -1,0 +1,18 @@
+---
+BasedOnStyle: Mozilla
+AlwaysBreakAfterDefinitionReturnType: TopLevel
+AlwaysBreakAfterReturnType: TopLevel
+BraceWrapping:
+  AfterClass: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterStruct: true
+  AfterExternBlock: true
+BreakBeforeBraces: Attach
+BreakConstructorInitializers: BeforeComma
+ColumnLimit: 80
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+NamespaceIndentation: None
+...
+
