@@ -53,7 +53,7 @@ public class PanitServer extends Server {
                 }
             break;
             case PacketIds.IMAGE:
-                if (packet[1] == " " || packet[2] == " ") {
+                if (packet[1].equals(" ") && packet[2].equals(" ")) {
                     sendeAnAlleAusser(id, message);
                 } else {
                     sendeAnEinen(packet[1], Integer.parseInt(packet[2]), getId(packet[1], Integer.parseInt(packet[2])) + message);
