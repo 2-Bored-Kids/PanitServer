@@ -33,7 +33,7 @@ public class PanitServer extends Server {
         int firstPort = list.get(0).partnerPort();
 
         if (getId(firstIp, firstPort) != id) {
-            sendeAnEinen(firstIp, firstPort, getId(firstIp, firstPort) + new ImagePacket(id, "").encode());
+            sendeAnEinen(firstIp, firstPort, getId(firstIp, firstPort) + new ImagePacket(id, " ").encode());
         }
     }
 
