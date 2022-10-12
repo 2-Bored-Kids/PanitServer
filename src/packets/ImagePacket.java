@@ -19,6 +19,6 @@ public class ImagePacket extends Packet{
 
     @Override
     public String encode(){
-        return Integer.toString(PacketIds.IMAGE) + ID + PacketIds.SEPARATOR + IMG;
+        return Integer.toString(PacketIds.IMAGE) + PacketIds.SEPARATOR + ID + PacketIds.SEPARATOR + IMG;
     }
 }
