@@ -9,7 +9,7 @@ public class ImagePacket extends Packet{
 
     public ImagePacket(String[] str){
         super(PacketIds.IMAGE);
-        this.ID = str[1] + str[2];
+        this.ID = str[1] + PacketIds.SEPARATOR + str[2];
         this.IMG = str[3];
     }
 
