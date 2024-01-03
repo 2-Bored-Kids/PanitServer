@@ -22,7 +22,9 @@ public class PanitServer extends Server {
 
     sendeAnAlleAusser(id, new JoinPacket().encode());
 
+    @SuppressWarnings("unchecked")
     Vector<Serververbindung> list = clientListe();
+
     for (Serververbindung verbindung : list) {
       String usrId =
         getId(verbindung.partnerAdresse(), verbindung.partnerPort());
@@ -91,7 +93,9 @@ public class PanitServer extends Server {
   }
 
   public void sendeAnAlleAusser(String id, String message) {
+    @SuppressWarnings("unchecked")
     Vector<Serververbindung> list = clientListe();
+
     for (Serververbindung verbindung : list) {
       if (!getId(verbindung.partnerAdresse(), verbindung.partnerPort())
              .equals(id)) {
